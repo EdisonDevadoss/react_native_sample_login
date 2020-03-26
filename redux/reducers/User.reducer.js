@@ -1,4 +1,3 @@
-// import { ProfileState, ProfileTypes } from "../actions/Profile/Profile.d";
 import {STORE_USER_DATA} from '../actionTypes/UserActionTypes';
 
 const INITIAL_STATE: ProfileState = {

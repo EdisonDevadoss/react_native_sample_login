@@ -5,17 +5,18 @@ import { connect } from "react-redux";
 function LoginScreen(props) {
   const [email, onChangeEmail] = React.useState();
   const [password, onChangePassword] = React.useState();
+  const {navigation, users} = props;
 
   const onLogin = () => {
     if (!email || !password) {
       alert('Enter email and password');
     } else {
-      const {users} = props;
       const isLogIn = users.some(user => {
         return user.email === email && user.password === password
       });
       if (isLogIn) {
-        alert('Log in successfully');
+        // alert('Log in successfully');
+        navigation.navigate('ProductList')
       } else {
         alert('Email or Password mismatched');
       }
